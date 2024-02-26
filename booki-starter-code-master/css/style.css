@@ -96,10 +96,85 @@ nav li {
     margin-right: 30px;
 }
 
+/* Barre de recherche */
+.search-bar{
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    border: 2px #FFFFFF solid;
+    border-radius: 15px;
+}
+
+#Location{
+    width: 50px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+} 
+    
+.Search{
+    width: 150px;
+    display: flex;
+    justify-content: flex-start;
+    border: hidden;
+    padding-left: 10px;
+    font-weight: bold;
+}
+    
+.Research{
+    width: 125px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: bold;
+    background-color: #0065FC;
+    color: white;
+    border: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-search{
+    display:none;
+}
+
+/* Filtres */
+button {
+    height: 60px;
+    display: flex;
+    align-items:center;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+.Filter-component{
+    display: flex;
+    gap: 20px;
+}
+
+
+#filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 25px;
+    padding-right: 10px;
+    
+}
+
+button:hover {
+    /* background-color: #d3e3fc; */
+    background-color: #DEEBFF;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 .hebergements-and-populaires section {
