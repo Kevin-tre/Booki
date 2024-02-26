@@ -171,6 +171,26 @@ button:hover {
     background-color: #DEEBFF;
 }
 
+.information {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#Circle-info{
+    color:#0065FC;;
+    border:2px solid;
+    border-color: grey;
+    width: 1px; /* Largeur égale à la hauteur */
+    height: 1px; /* Hauteur égale à la largeur */
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
