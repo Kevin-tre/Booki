@@ -58,6 +58,44 @@ a {
     color: var(--main-bg-color)
 }
 
+/* Header */
+
+header {
+    /* height:50px; */
+    padding-bottom: 30px;
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    padding-top: 20px;
+}
+
+
+nav a:hover {
+    /* text-decoration: overline #0065FC; */
+    border-top: 3px #0065FC solid;
+
+}
+
+nav li {
+    margin-right: 30px;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
