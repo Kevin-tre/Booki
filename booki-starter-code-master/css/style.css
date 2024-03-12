@@ -1,12 +1,12 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+    --main-color: #0065fc;
+    --main-bg-color: #f2f2f2;
+    --filter-bg-color: #deebff;
 }
 
 .fa-solid {
@@ -21,7 +21,6 @@ body {
 }
 
 .main-container {
-    width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
@@ -58,7 +57,7 @@ a {
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
 }
 
 /* Header */
@@ -87,31 +86,32 @@ nav ul {
     box-sizing: border-box;
 }
 
-
 nav li:hover {
     border-top: 3px var(--main-color) solid;
     color: var(--main-color);
     box-sizing: border-box;
-
 }
 
 nav li {
+    border-top: 3px transparent solid;
     margin-right: 30px;
     padding-top: 20px;
 }
 
 /* Barre de recherche */
 .search-bar {
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: flex-start;
-    border: 2px #FFFFFF solid;
+    border: 2px #ffffff solid;
     border-radius: 15px;
 }
 
 #Location {
     width: 50px;
-    background-color: #F2F2F2;
+    height: 50px;
+    background-color: #f2f2f2;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +133,7 @@ nav li {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     font-weight: bold;
-    background-color: #0065FC;
+    background-color: #0065fc;
     color: white;
     border: hidden;
     display: flex;
@@ -143,21 +143,26 @@ nav li {
 .mobile-search {
     display: none;
     border-radius: 10px;
-    height: 50px;
-    width: 50px;
 }
 
 /* Filtres */
+
+.filter-buttons-container {
+    display: flex;
+}
+
 .filter-button {
     height: 60px;
     display: flex;
+    justify-content: center;
     align-items: center;
     border-radius: 30px;
+    border-color: gray;
     background-color: white;
     font-size: 15px;
     font-weight: bold;
     padding: 0 20px;
-
+    margin: 0 10px;
 }
 
 .Filter-component {
@@ -166,19 +171,16 @@ nav li {
     gap: 20px;
 }
 
-
 #filter {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 25px;
     padding-right: 10px;
-
 }
 
 button:hover {
-    /* background-color: #d3e3fc; */
-    background-color: #DEEBFF;
+    background-color: var(--filter-bg-color);
 }
 
 .information {
@@ -188,8 +190,7 @@ button:hover {
 }
 
 #Circle-info {
-    color: #0065FC;
-    ;
+    color: #0065fc;
     border: 2px solid;
     border-color: grey;
     width: 1px;
@@ -202,7 +203,6 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -273,9 +273,6 @@ button:hover {
     margin-bottom: 20px;
 }
 
-
-
-
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -320,7 +317,6 @@ button:hover {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-
 
 /****** Activités ***********/
 .activities {
@@ -395,10 +391,10 @@ footer ul {
 }
 
 /* .footer-container {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-} */
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+  } */
 
 .footer-items {
     display: flex;
@@ -411,6 +407,21 @@ footer ul {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .Filter-component {
+        flex-wrap: wrap;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .filter-button {
+        font-size: 14px;
+    }
+
+    .information {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -442,14 +453,17 @@ footer ul {
         font-size: 13px;
     }
 
-    .Filter-component {
-        flex-wrap: wrap;
+    .activities-cards .card-content {
+        height: 60px;
+        padding-left: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
-    .Filter-component h3 {
-        margin-bottom: 0px;
-        width: 100%;
-        /* Force le titre à occuper toute la largeur */
+    .activities-cards .card-title {
+        width: 150px;
+        font-size: 15px;
     }
 
     .activities-cards img {
@@ -459,19 +473,105 @@ footer ul {
         border-top-right-radius: 20px;
         object-fit: cover;
     }
-
-
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-
     .main-container {
         padding: 0;
     }
 
     .information-container {
         padding: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    nav img {
+        padding-bottom: 30px;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav li {
+        width: 50%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav li:hover {
+        padding-bottom: 10px;
+        border-top: 3px transparent solid;
+        border-bottom: 3px var(--main-color) solid;
+    }
+
+    .search-bar {
+        justify-content: space-between;
+    }
+
+    .Search {
+        font-size: 17px;
+    }
+
+    #Location {
+        font-size: 17px;
+    }
+
+    .Research {
+        display: none;
+    }
+
+    .mobile-search {
+        display: block;
+        margin: 0;
+        background-color: var(--main-color);
+        border: none;
+        border-radius: 15px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .fa-magnifying-glass {
+        color: white;
+        font-size: 17px;
+    }
+
+    .filter-buttons-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .filter-button {
+        width: 49%;
+        margin: 0;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .filter-component {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    i#filter.fa-solid {
+        height: 40px;
+        width: 20px;
+        padding-right: 15px;
+    }
+
+    .button {
+        width: 50px;
+    }
+
+    .information {
+        padding-top: 15px;
     }
 
     .hebergements-and-populaires {
@@ -483,38 +583,77 @@ footer ul {
     }
 
     .populaires {
-        margin-bottom: 50px;
-    }
-
-
-    .Research {
-        display: none;
-    }
-
-    .mobile-search {
-        display: block;
         margin: 0;
     }
 
-    .filter-button {
-        height: 44px;
-        width: 37%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        border-radius: 30px;
-        background-color: white;
-        font-size: 15px;
-        font-weight: bold;
-        padding: 0 20px;
-
-    }
-
-    .Filter-component {
+    .populaires-cards {
+        flex-direction: column;
         width: 100%;
-        display: flex;
-        gap: 20px;
     }
 
+    .populaires-cards a,
+    .hebergements-cards a {
+        width: 100%;
+    }
 
+    section.hebergements {
+        background-color: white;
+    }
+
+    .more {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hebergements-cards {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hebergements-cards .card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .hebergements-cards .card-content {
+        padding-left: 15px;
+    }
+
+    .hebergements-cards .card-subtitle {
+        margin: 0;
+        padding-top: 3px;
+        padding-bottom: 5px;
+    }
+
+    .activities-title {
+        padding-left: 20px;
+        padding-top: 15px;
+        margin: 0;
+    }
+
+    .activities-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activities-cards a {
+        width: 83%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer h3 {
+        padding-left: 55px;
+        white-space: nowrap;
+        /*Force le texte à rester sur une seule ligne*/
+        margin-bottom: 0;
+    }
+
+    footer li {
+        white-space: nowrap;
+        padding-left: 55px;
+    }
 }

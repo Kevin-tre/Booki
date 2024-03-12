@@ -26,8 +26,8 @@
         <nav>
           <img src="images/logo/Booki.png" alt="Logo Booki" />
           <ul>
-            <li><a href="#hebergementmarseille">Hébergements</a></li>
-            <li><a href="#">Activités</a></li>
+            <li><a href="#hebergement-marseille">Hébergements</a></li>
+            <li><a href="#activities-marseille">Activités</a></li>
           </ul>
         </nav>
       </header>
@@ -57,18 +57,21 @@
           <!-- Section filtres -->
           <div class="Filter-component">
             <h3>Filtres</h3>
-            <button class="filter-button">
-              <i id="filter" class="fa-solid fa-money-bill-wave"></i>Economique
-            </button>
-            <button class="filter-button">
-              <i id="filter" class="fa-solid fa-person"></i>Familial
-            </button>
-            <button class="filter-button">
-              <i id="filter" class="fa-solid fa-heart"></i>Romantique
-            </button>
-            <button class="filter-button">
-              <i id="filter" class="fa-solid fa-fire"></i>Nos pépites
-            </button>
+            <div class="filter-buttons-container">
+              <button class="filter-button">
+                <i id="filter" class="fa-solid fa-money-bill-wave"></i
+                >Economique
+              </button>
+              <button class="filter-button">
+                <i id="filter" class="fa-solid fa-person"></i>Familial
+              </button>
+              <button class="filter-button">
+                <i id="filter" class="fa-solid fa-heart"></i>Romantique
+              </button>
+              <button class="filter-button">
+                <i id="filter" class="fa-solid fa-fire"></i>Nos pépites
+              </button>
+            </div>
           </div>
           <div class="information">
             <i id="Circle-info" class="fa-solid fa-info"></i>
@@ -79,7 +82,7 @@
           <!-- Partie hébergements à Marseille -->
           <section class="hebergements">
             <div class="hebergements-title">
-              <h2 id="hebergementmarseille" class="section-title">
+              <h2 id="hebergement-marseille" class="section-title">
                 Hébergements à Marseille
               </h2>
             </div>
@@ -247,7 +250,7 @@
                 </article>
               </a>
             </div>
-            <h3>Afficher plus</h3>
+            <h3 class="more">Afficher plus</h3>
           </section>
           <!-- Partie les plus populaires -->
           <section class="populaires">
@@ -345,7 +348,9 @@
         <!-- Partie activités à Marseille -->
         <section class="activities">
           <div class="activities-title">
-            <h2 class="activities-title">Activité à Marseille</h2>
+            <h2 id="activities-marseille" class="activities-title">
+              Activité à Marseille
+            </h2>
           </div>
           <div class="activities-cards">
             <a href="#">
